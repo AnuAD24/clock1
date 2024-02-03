@@ -1,0 +1,34 @@
+let time=()=>{
+
+    
+    let element1=document.querySelector("h1")
+    let element=document.getElementById("h2")
+
+    let date=new Date();
+    month=date.getMonth();
+    hour=date.getHours(),
+    min=date.getMinutes(),
+    sec=date.getSeconds();
+    days=date.getDay();
+    year=date.getFullYear();
+    date=date.getDate();
+    
+
+    let max=["sunday","monday","tuesday","wednesday","Thursday","friday","saturday"]
+
+    let man=["jan","feb","mar","april","may","jun","jul","aug","sep","oct","nov","dec"]
+
+    let day=hour<12?"AM":"PM"
+
+    element1.innerText=` ${max[days]} ${man[month]} ${date} ${year}`
+
+    element.innerText=`${hour} : ${min} : ${sec}  ${day}`
+     
+    }
+    time()
+
+    setInterval(time,1000)
+
+
+
+    console.log("darshan");
